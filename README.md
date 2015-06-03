@@ -41,4 +41,4 @@ MIT
 
 Screenshot
 ========
-![](etc/screenshot.png)
+<center>![alt tag]etc/screenshot.png</center>
