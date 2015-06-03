@@ -29,9 +29,9 @@ class DayCollectionCell: UICollectionViewCell {
     var disabled: Bool = false {
         didSet {
             if disabled {
-                label.alpha = 0.4
+                alpha = 0.4
             } else {
-                label.alpha = 1.0
+                alpha = 1.0
             }
         }
     }
