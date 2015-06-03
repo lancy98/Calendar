@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="WeekHeaderView" id="U6b-Vx-4bR" customClass="WeekHeaderView" customModule="Calendar" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="322" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cLL-qk-cCr">
+                    <rect key="frame" x="0.0" y="0.0" width="46" height="50"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o8G-vn-uVY">
+                    <rect key="frame" x="46" y="0.0" width="46" height="50"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iAa-Mz-CCc">
+                    <rect key="frame" x="92" y="0.0" width="46" height="50"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HSd-hN-OJj">
+                    <rect key="frame" x="138" y="0.0" width="46" height="50"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DPc-U2-5VV">
+                    <rect key="frame" x="184" y="0.0" width="46" height="50"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fEr-m9-gcc">
+                    <rect key="frame" x="276" y="0.0" width="46" height="50"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QrB-FI-zMd">
+                    <rect key="frame" x="230" y="0.0" width="46" height="50"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="cLL-qk-cCr" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="1ZT-R1-8E2"/>
+                <constraint firstItem="iAa-Mz-CCc" firstAttribute="width" secondItem="HSd-hN-OJj" secondAttribute="width" id="4HY-Yk-Zut"/>
+                <constraint firstItem="DPc-U2-5VV" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="4IM-iI-5z6"/>
+                <constraint firstAttribute="bottom" secondItem="cLL-qk-cCr" secondAttribute="bottom" id="4hS-n6-7db"/>
+                <constraint firstItem="iAa-Mz-CCc" firstAttribute="width" secondItem="cLL-qk-cCr" secondAttribute="width" id="Cxw-94-yUz"/>
+                <constraint firstAttribute="bottom" secondItem="DPc-U2-5VV" secondAttribute="bottom" id="DwU-5o-cxr"/>
+                <constraint firstItem="cLL-qk-cCr" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" id="F7T-AT-hfC"/>
+                <constraint firstAttribute="bottom" secondItem="HSd-hN-OJj" secondAttribute="bottom" id="Gh3-2A-xE7"/>
+                <constraint firstItem="iAa-Mz-CCc" firstAttribute="leading" secondItem="o8G-vn-uVY" secondAttribute="trailing" id="KWE-Hi-vVM"/>
+                <constraint firstItem="o8G-vn-uVY" firstAttribute="leading" secondItem="cLL-qk-cCr" secondAttribute="trailing" id="Lhb-yE-PwF"/>
+                <constraint firstItem="iAa-Mz-CCc" firstAttribute="width" secondItem="DPc-U2-5VV" secondAttribute="width" id="Lhi-Em-HlZ"/>
+                <constraint firstAttribute="bottom" secondItem="fEr-m9-gcc" secondAttribute="bottom" id="MGp-Tt-bb4"/>
+                <constraint firstItem="iAa-Mz-CCc" firstAttribute="width" secondItem="fEr-m9-gcc" secondAttribute="width" id="P7k-xT-kw5"/>
+                <constraint firstItem="fEr-m9-gcc" firstAttribute="leading" secondItem="QrB-FI-zMd" secondAttribute="trailing" id="Sc3-FH-hbH"/>
+                <constraint firstItem="o8G-vn-uVY" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="U0K-RV-ZSW"/>
+                <constraint firstItem="HSd-hN-OJj" firstAttribute="leading" secondItem="iAa-Mz-CCc" secondAttribute="trailing" id="Y5H-LJ-Adc"/>
+                <constraint firstItem="fEr-m9-gcc" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="flN-Od-Z9N"/>
+                <constraint firstItem="iAa-Mz-CCc" firstAttribute="width" secondItem="QrB-FI-zMd" secondAttribute="width" id="i5j-s4-kZs"/>
+                <constraint firstItem="QrB-FI-zMd" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="kG5-aC-KfJ"/>
+                <constraint firstItem="iAa-Mz-CCc" firstAttribute="width" secondItem="o8G-vn-uVY" secondAttribute="width" id="lVq-jE-gTT"/>
+                <constraint firstAttribute="bottom" secondItem="iAa-Mz-CCc" secondAttribute="bottom" id="ngv-IO-Y2j"/>
+                <constraint firstItem="HSd-hN-OJj" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="nsN-WB-djc"/>
+                <constraint firstAttribute="trailing" secondItem="fEr-m9-gcc" secondAttribute="trailing" id="pPm-Lb-xjD"/>
+                <constraint firstAttribute="bottom" secondItem="QrB-FI-zMd" secondAttribute="bottom" id="tQn-KZ-clh"/>
+                <constraint firstItem="QrB-FI-zMd" firstAttribute="leading" secondItem="DPc-U2-5VV" secondAttribute="trailing" id="uqF-au-KlX"/>
+                <constraint firstItem="iAa-Mz-CCc" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="vv0-0a-jMA"/>
+                <constraint firstItem="DPc-U2-5VV" firstAttribute="leading" secondItem="HSd-hN-OJj" secondAttribute="trailing" id="wUV-y6-soe"/>
+                <constraint firstAttribute="bottom" secondItem="o8G-vn-uVY" secondAttribute="bottom" id="zRb-Pk-Oc2"/>
+            </constraints>
+            <connections>
+                <outletCollection property="labels" destination="cLL-qk-cCr" collectionClass="NSMutableArray" id="dq0-iR-8ym"/>
+                <outletCollection property="labels" destination="o8G-vn-uVY" collectionClass="NSMutableArray" id="5wd-Ma-JEU"/>
+                <outletCollection property="labels" destination="iAa-Mz-CCc" collectionClass="NSMutableArray" id="9fB-9d-HTM"/>
+                <outletCollection property="labels" destination="HSd-hN-OJj" collectionClass="NSMutableArray" id="aNc-Br-bIn"/>
+                <outletCollection property="labels" destination="DPc-U2-5VV" collectionClass="NSMutableArray" id="JpW-2H-koz"/>
+                <outletCollection property="labels" destination="QrB-FI-zMd" collectionClass="NSMutableArray" id="iQW-Gr-X7j"/>
+                <outletCollection property="labels" destination="fEr-m9-gcc" collectionClass="NSMutableArray" id="Jui-KG-J1t"/>
+            </connections>
+        </collectionReusableView>
+    </objects>
+</document>
