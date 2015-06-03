@@ -85,7 +85,7 @@ class CalendarLogic: Hashable {
         parts.day = baseDate.numberOfDaysInMonth
         let date = NSCalendar.currentCalendar().dateFromComponents(parts)
         
-        // 7*6 = 42 :- 7 columns (week day) and 6 rows (max 6 weeks in a month)
+        // 7*6 = 42 :- 7 columns (7 days in a week) and 6 rows (max 6 weeks in a month)
         return 42 - (numberOfDaysInPreviousPartialWeek + baseDate.numberOfDaysInMonth)
     }
     
