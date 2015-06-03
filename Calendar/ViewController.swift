@@ -15,8 +15,12 @@ class ViewController: UIViewController, CalendarViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // todays date.
         let date = NSDate()
         
+        // create an instance of calendar view with 
+        // base date (Calendar shows 12 months range from current base date)
+        // selected date (marked dated in the calendar)
         let calendarView = CalendarView.instance(date, selectedDate: date)
         calendarView.delegate = self
         calendarView.setTranslatesAutoresizingMaskIntoConstraints(false)
