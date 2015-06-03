@@ -39,7 +39,7 @@ Screenshot
 ========
 <center>![](etc/screenshot.png)</center>
 
-Licence
+License
 ========
 The MIT License (MIT)
 
