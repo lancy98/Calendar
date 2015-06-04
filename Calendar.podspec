@@ -15,6 +15,6 @@ Pod::Spec.new do |s|
   s.author             = { "Lancy Norbert Fernandes" => "lancy98@gmail.com" }
   s.platform     = :ios, "8.0"
   s.source       = { :git => "https://github.com/lancy98/Calendar.git", :tag => "0.1" }
-  s.source_files  = 'CalendarKit'
+  s.source_files  = 'Calendar/CalendarKit'
   s.requires_arc = true
 end
