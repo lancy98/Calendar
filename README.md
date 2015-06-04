@@ -1,7 +1,11 @@
 # iOS calendar component writtern in swift
 Usage
 ========
-1. Drag the `CalendarKit` folder into your project directory.
+1. Calendar is available through [CocoaPods](http://cocoapods.org). To install
+it, simply add the following line to your Podfile:
+<pre lang="ruby">
+pod "Calendar"
+</pre>
 2. You can add the calendar to a placeholder view, so create an outlet for it.
 <pre lang="Swift">
 @IBOutlet var placeholderView: UIView!
