@@ -39,7 +39,7 @@ class CalendarView: UIView, UICollectionViewDataSource, UICollectionViewDelegate
                     set.insert(CalendarLogic(date: dateIter1))
                     set.insert(CalendarLogic(date: dateIter2))
                 }
-                collectionData = sorted(Array(set), <)
+                collectionData = Array(set).sort(<)
             }
             
             updateHeader()
@@ -65,7 +65,7 @@ class CalendarView: UIView, UICollectionViewDataSource, UICollectionViewDelegate
     }
     
     class func instance(baseDate: NSDate, selectedDate: NSDate) -> CalendarView {
-        var calendarView = NSBundle.mainBundle().loadNibNamed("CalendarView", owner: nil, options: nil).first as! CalendarView
+        let calendarView = NSBundle.mainBundle().loadNibNamed("CalendarView", owner: nil, options: nil).first as! CalendarView
         calendarView.selectedDate = selectedDate
         calendarView.baseDate = baseDate
         return calendarView
@@ -124,7 +124,7 @@ class CalendarView: UIView, UICollectionViewDataSource, UICollectionViewDelegate
     }
     
     func advance(byIndex: Int, animate: Bool) {
-        var visibleIndexPath = self.collectionView.indexPathsForVisibleItems().first as! NSIndexPath
+        var visibleIndexPath = self.collectionView.indexPathsForVisibleItems().first as NSIndexPath!
         
         if (visibleIndexPath.item == 0 && byIndex == -1) ||
            ((visibleIndexPath.item + 1) == collectionView.numberOfItemsInSection(0) && byIndex == 1) {

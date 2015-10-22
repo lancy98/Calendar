@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Date: Printable, Equatable {
+class Date: CustomStringConvertible, Equatable {
     
     var day: Int
     var month: Int

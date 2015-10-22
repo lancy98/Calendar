@@ -51,11 +51,11 @@ class CalendarLogic: Hashable {
     
     func isVisible(date: NSDate) -> Bool {
         let internalDate = Date(date: date)
-        if contains(currentMonthDays!, internalDate) {
+        if (currentMonthDays!).contains(internalDate) {
             return true
-        } else if contains(previousMonthVisibleDays!, internalDate) {
+        } else if (previousMonthVisibleDays!).contains(internalDate) {
             return true
-        } else if contains(nextMonthVisibleDays!, internalDate) {
+        } else if (nextMonthVisibleDays!).contains(internalDate) {
             return true
         }
         return false
@@ -83,7 +83,6 @@ class CalendarLogic: Hashable {
         let parts = baseDate.monthDayAndYearComponents
         
         parts.day = baseDate.numberOfDaysInMonth
-        let date = NSCalendar.currentCalendar().dateFromComponents(parts)
         
         // 7*6 = 42 :- 7 columns (7 days in a week) and 6 rows (max 6 weeks in a month)
         return 42 - (numberOfDaysInPreviousPartialWeek + baseDate.numberOfDaysInMonth)
@@ -121,7 +120,7 @@ class CalendarLogic: Hashable {
         let numberOfDays = numberOfVisibleDaysforFollowingMonth
         let parts  = date.monthDayAndYearComponents
         
-        for var i = 1; i <= numberOfVisibleDaysforFollowingMonth; i++ {
+        for var i = 1; i <= numberOfDays; i++ {
             dates.append(Date(day: i, month: parts.month, year: parts.year))
         }
         return dates

@@ -43,7 +43,7 @@ extension NSDate {
 
     var firstDayOfTheMonth: NSDate {
         var date: NSDate?
-        NSCalendar.currentCalendar().rangeOfUnit(.CalendarUnitMonth, startDate:&date , interval: nil, forDate: self)
+        NSCalendar.currentCalendar().rangeOfUnit(.Month, startDate:&date , interval: nil, forDate: self)
         return date!
     }
 
@@ -56,7 +56,7 @@ extension NSDate {
     }
     
     var monthDayAndYearComponents: NSDateComponents {
-        let components: NSCalendarUnit = .CalendarUnitYear | .CalendarUnitMonth | .CalendarUnitDay
+        let components: NSCalendarUnit = [.Year, .Month, .Day]
         return NSCalendar.currentCalendar().components(components, fromDate: self)
     }
     
@@ -65,7 +65,7 @@ extension NSDate {
     }
     
     var numberOfDaysInMonth: Int {
-        return NSCalendar.currentCalendar().rangeOfUnit(.CalendarUnitDay, inUnit: .CalendarUnitMonth, forDate: self).length
+        return NSCalendar.currentCalendar().rangeOfUnit(.Day, inUnit: .Month, forDate: self).length
     }
     
     var day: Int {
@@ -95,7 +95,7 @@ extension NSDate {
     //MARK: Private variable and methods.
     
     private var components: NSDateComponents {
-        let calendarUnit = NSCalendarUnit(UInt.max)
+        let calendarUnit = NSCalendarUnit(rawValue: UInt.max)
         let components = NSCalendar.currentCalendar().components(calendarUnit, fromDate: self)
         return components
     }
@@ -104,7 +104,7 @@ extension NSDate {
         let dateComponent = NSDateComponents()
         dateComponent.month = followingMonth ? 1: -1
         
-        let date = NSCalendar.currentCalendar().dateByAddingComponents(dateComponent, toDate: self, options: NSCalendarOptions(0))
+        let date = NSCalendar.currentCalendar().dateByAddingComponents(dateComponent, toDate: self, options: NSCalendarOptions(rawValue: 0))
         return date!.firstDayOfTheMonth
     }
 }
