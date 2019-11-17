@@ -16,12 +16,11 @@
 		B1FF26B51B1EE79D00004E01 /* CalendarLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FF26AA1B1EE79D00004E01 /* CalendarLogic.swift */; };
 		B1FF26B61B1EE79D00004E01 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FF26AB1B1EE79D00004E01 /* CalendarView.swift */; };
 		B1FF26B71B1EE79D00004E01 /* CalendarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1FF26AC1B1EE79D00004E01 /* CalendarView.xib */; };
-		B1FF26B81B1EE79D00004E01 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FF26AD1B1EE79D00004E01 /* Date.swift */; };
 		B1FF26B91B1EE79D00004E01 /* DayCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FF26AE1B1EE79D00004E01 /* DayCollectionCell.swift */; };
 		B1FF26BA1B1EE79D00004E01 /* DayCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1FF26AF1B1EE79D00004E01 /* DayCollectionCell.xib */; };
 		B1FF26BB1B1EE79D00004E01 /* MonthCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FF26B01B1EE79D00004E01 /* MonthCollectionCell.swift */; };
 		B1FF26BC1B1EE79D00004E01 /* MonthCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1FF26B11B1EE79D00004E01 /* MonthCollectionCell.xib */; };
-		B1FF26BD1B1EE79D00004E01 /* NSDateAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FF26B21B1EE79D00004E01 /* NSDateAdditions.swift */; };
+		B1FF26BD1B1EE79D00004E01 /* Date+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FF26B21B1EE79D00004E01 /* Date+Additions.swift */; };
 		B1FF26BE1B1EE79D00004E01 /* WeekHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FF26B31B1EE79D00004E01 /* WeekHeaderView.swift */; };
 		B1FF26BF1B1EE79D00004E01 /* WeekHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1FF26B41B1EE79D00004E01 /* WeekHeaderView.xib */; };
 /* End PBXBuildFile section */
@@ -50,12 +49,11 @@
 		B1FF26AA1B1EE79D00004E01 /* CalendarLogic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarLogic.swift; sourceTree = "<group>"; };
 		B1FF26AB1B1EE79D00004E01 /* CalendarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		B1FF26AC1B1EE79D00004E01 /* CalendarView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CalendarView.xib; sourceTree = "<group>"; };
-		B1FF26AD1B1EE79D00004E01 /* Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		B1FF26AE1B1EE79D00004E01 /* DayCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayCollectionCell.swift; sourceTree = "<group>"; };
 		B1FF26AF1B1EE79D00004E01 /* DayCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DayCollectionCell.xib; sourceTree = "<group>"; };
 		B1FF26B01B1EE79D00004E01 /* MonthCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonthCollectionCell.swift; sourceTree = "<group>"; };
 		B1FF26B11B1EE79D00004E01 /* MonthCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MonthCollectionCell.xib; sourceTree = "<group>"; };
-		B1FF26B21B1EE79D00004E01 /* NSDateAdditions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDateAdditions.swift; sourceTree = "<group>"; };
+		B1FF26B21B1EE79D00004E01 /* Date+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Additions.swift"; sourceTree = "<group>"; };
 		B1FF26B31B1EE79D00004E01 /* WeekHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeekHeaderView.swift; sourceTree = "<group>"; };
 		B1FF26B41B1EE79D00004E01 /* WeekHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WeekHeaderView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -147,8 +145,7 @@
 				B1FF26B31B1EE79D00004E01 /* WeekHeaderView.swift */,
 				B1FF26B41B1EE79D00004E01 /* WeekHeaderView.xib */,
 				B1FF26AA1B1EE79D00004E01 /* CalendarLogic.swift */,
-				B1FF26AD1B1EE79D00004E01 /* Date.swift */,
-				B1FF26B21B1EE79D00004E01 /* NSDateAdditions.swift */,
+				B1FF26B21B1EE79D00004E01 /* Date+Additions.swift */,
 			);
 			path = CalendarKit;
 			sourceTree = "<group>";
@@ -216,6 +213,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -259,12 +257,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B1FF26BD1B1EE79D00004E01 /* NSDateAdditions.swift in Sources */,
+				B1FF26BD1B1EE79D00004E01 /* Date+Additions.swift in Sources */,
 				B1FF26BB1B1EE79D00004E01 /* MonthCollectionCell.swift in Sources */,
 				B1F107211B1C80A70008D332 /* ViewController.swift in Sources */,
 				B1FF26B61B1EE79D00004E01 /* CalendarView.swift in Sources */,
 				B1FF26B91B1EE79D00004E01 /* DayCollectionCell.swift in Sources */,
-				B1FF26B81B1EE79D00004E01 /* Date.swift in Sources */,
 				B1FF26B51B1EE79D00004E01 /* CalendarLogic.swift in Sources */,
 				B1F1071F1B1C80A70008D332 /* AppDelegate.swift in Sources */,
 				B1FF26BE1B1EE79D00004E01 /* WeekHeaderView.swift in Sources */,
@@ -399,6 +396,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Lancy.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -410,6 +408,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Lancy.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};

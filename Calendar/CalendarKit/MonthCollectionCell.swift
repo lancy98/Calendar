@@ -21,7 +21,7 @@ class MonthCollectionCell: UICollectionViewCell, UICollectionViewDataSource, UIC
     var previousMonthVisibleDatesCount = 0
     var currentMonthVisibleDatesCount = 0
     var nextMonthVisibleDatesCount = 0
-
+    
     var logic: CalendarLogic? {
         didSet {
             populateDates()
@@ -52,7 +52,7 @@ class MonthCollectionCell: UICollectionViewCell, UICollectionViewDataSource, UIC
             nextMonthVisibleDatesCount = logic!.nextMonthVisibleDays!.count
             
         } else {
-            dates.removeAll(keepCapacity: false)
+            dates.removeAll(keepingCapacity: false)
         }
     }
     
@@ -60,20 +60,21 @@ class MonthCollectionCell: UICollectionViewCell, UICollectionViewDataSource, UIC
         super.awakeFromNib()
         
         let nib = UINib(nibName: "DayCollectionCell", bundle: nil)
-        self.collectionView.registerNib(nib, forCellWithReuseIdentifier: "DayCollectionCell")
+        self.collectionView.register(nib, forCellWithReuseIdentifier: "DayCollectionCell")
         
         let headerNib = UINib(nibName: "WeekHeaderView", bundle: nil)
-        self.collectionView.registerNib(headerNib, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "WeekHeaderView")
+        self.collectionView.register(headerNib, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "WeekHeaderView")
     }
-
-    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // 7*6 = 42 :- 7 columns (7 days in a week) and 6 rows (max 6 weeks in a month)
         return 42
     }
     
-    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("DayCollectionCell", forIndexPath: indexPath) as! DayCollectionCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DayCollectionCell",
+                                                      for: indexPath) as! DayCollectionCell
         
         let date = dates[indexPath.item]
         
@@ -81,27 +82,39 @@ class MonthCollectionCell: UICollectionViewCell, UICollectionViewDataSource, UIC
         cell.mark = (selectedDate == date)
         
         cell.disabled = (indexPath.item < previousMonthVisibleDatesCount) ||
-                        (indexPath.item >= previousMonthVisibleDatesCount
-                            + currentMonthVisibleDatesCount)
+            (indexPath.item >= previousMonthVisibleDatesCount
+                + currentMonthVisibleDatesCount)
         
         return cell
     }
     
-    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+    
+    func collectionView(_ collectionView: UICollectionView,
+                        didSelectItemAt indexPath: IndexPath) {
         if monthCellDelgate != nil {
-            monthCellDelgate!.didSelect(dates[indexPath.item])
+            monthCellDelgate!.didSelect(date: dates[indexPath.item])
         }
     }
     
-    func collectionView(collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, atIndexPath indexPath: NSIndexPath) -> UICollectionReusableView {
-        return collectionView.dequeueReusableSupplementaryViewOfKind(UICollectionElementKindSectionHeader, withReuseIdentifier: "WeekHeaderView", forIndexPath: indexPath) 
+    func collectionView(_ collectionView: UICollectionView,
+                        viewForSupplementaryElementOfKind kind: String,
+                        at indexPath: IndexPath) -> UICollectionReusableView {
+        return collectionView.dequeueReusableSupplementaryView(
+            ofKind: UICollectionView.elementKindSectionHeader,
+            withReuseIdentifier: "WeekHeaderView",
+            for: indexPath
+        )
     }
     
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
-        return CGSizeMake(collectionView.frame.width/7.0, collectionView.frame.height/7.0)
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: collectionView.frame.width/7.0, height: collectionView.frame.height/7.0)
     }
     
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-        return CGSizeMake(collectionView.frame.width, collectionView.frame.height/7.0)
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        referenceSizeForHeaderInSection section: Int) -> CGSize {
+        return CGSize(width: collectionView.frame.width, height: collectionView.frame.height/7.0)
     }
 }

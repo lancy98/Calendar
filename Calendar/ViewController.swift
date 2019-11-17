@@ -11,27 +11,27 @@ import UIKit
 class ViewController: UIViewController, CalendarViewDelegate {
     
     @IBOutlet var placeholderView: UIView!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // todays date.
-        let date = NSDate()
+        let date = Date()
         
         // create an instance of calendar view with 
         // base date (Calendar shows 12 months range from current base date)
         // selected date (marked dated in the calendar)
-        let calendarView = CalendarView.instance(date, selectedDate: date)
+        let calendarView = CalendarView.instance(baseDate: date, selectedDate: date)
         calendarView.delegate = self
         calendarView.translatesAutoresizingMaskIntoConstraints = false
         placeholderView.addSubview(calendarView)
         
         // Constraints for calendar view - Fill the parent view.
-        placeholderView.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|[calendarView]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["calendarView": calendarView]))
-        placeholderView.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|[calendarView]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["calendarView": calendarView]))
+        placeholderView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[calendarView]|", options: NSLayoutConstraint.FormatOptions(rawValue: 0), metrics: nil, views: ["calendarView": calendarView]))
+        placeholderView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[calendarView]|", options: NSLayoutConstraint.FormatOptions(rawValue: 0), metrics: nil, views: ["calendarView": calendarView]))
     }
     
-    func didSelectDate(date: NSDate) {
+    func didSelectDate(date: Date) {
         print("\(date.year)-\(date.month)-\(date.day)")
     }
 }

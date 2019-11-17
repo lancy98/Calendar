@@ -39,9 +39,9 @@ class DayCollectionCell: UICollectionViewCell {
     var mark: Bool = false {
         didSet {
             if mark {
-                markedView!.hidden = false
+                markedView!.isHidden = false
             } else {
-                markedView!.hidden = true
+                markedView!.isHidden = true
             }
         }
     }
