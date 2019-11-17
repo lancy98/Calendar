@@ -9,35 +9,35 @@ Usage
 3. Your `viewDidLoad` method in the `Viewcontroller` should look like
 <pre lang="Swift">
 override func viewDidLoad() {
-        super.viewDidLoad()
+    super.viewDidLoad()
         
-        // todays date.
-        let date = NSDate()
+    // todays date.
+    let date = Date()
         
-        // create an instance of calendar view with 
-        // base date (Calendar shows 12 months range from current base date)
-        // selected date (marked dated in the calendar)
-        let calendarView = CalendarView.instance(date, selectedDate: date)
-        calendarView.delegate = self
-        calendarView.setTranslatesAutoresizingMaskIntoConstraints(false)
-        placeholderView.addSubview(calendarView)
+    // create an instance of calendar view with 
+    // base date (Calendar shows 12 months range from current base date)
+    // selected date (marked dated in the calendar)
+    let calendarView = CalendarView.instance(baseDate: date, selectedDate: date)
+    calendarView.delegate = self
+    calendarView.translatesAutoresizingMaskIntoConstraints = false
+    placeholderView.addSubview(calendarView)
         
-        // Constraints for calendar view - Fill the parent view.
-        placeholderView.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|[calendarView]|", options: NSLayoutFormatOptions(0), metrics: nil, views: ["calendarView": calendarView]))
-        placeholderView.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|[calendarView]|", options: NSLayoutFormatOptions(0), metrics: nil, views: ["calendarView": calendarView]))
-    }
+    // Constraints for calendar view - Fill the parent view.
+    placeholderView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[calendarView]|", options: NSLayoutConstraint.FormatOptions(rawValue: 0), metrics: nil, views: ["calendarView": calendarView]))
+    placeholderView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[calendarView]|", options: NSLayoutConstraint.FormatOptions(rawValue: 0), metrics: nil, views: ["calendarView": calendarView]))
+ }
 </pre>
 4. Implement the delegate method
 <pre lang="Swift">
-func didSelectDate(date: NSDate) {
-        println("\(date.year)-\(date.month)-\(date.day)")
-    }
+func didSelectDate(date: Date) {
+    println("\(date.year)-\(date.month)-\(date.day)")
+}
 </pre>
 Make sure your `Viewcontroller` class conforms to `CalendarViewDelegate` protocol.
 
 Screenshot
 ========
-<center>![](etc/screenshot.png)</center>
+<center><img src="https://github.com/lancy98/Calendar/blob/master/etc/screenshot.png" width=320></center>
 
 License
 ========
