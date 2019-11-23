@@ -1,8 +1,7 @@
-# iOS calendar component writtern in swift
+# iOS calendar component writtern in swift  [![Build Status](https://travis-ci.com/lancy98/Calendar.svg?branch=master)](https://travis-ci.com/lancy98/Calendar)
+
 Usage
 ========
-[![Build Status](https://travis-ci.com/lancy98/Calendar.svg?branch=master)](https://travis-ci.com/lancy98/Calendar)
-
 1. Drag the `CalendarKit`folder into your project. You will find this folder inside `Calendar`.
 2. You can add the calendar to a placeholder view, so create an outlet for it.
 <pre lang="Swift">
