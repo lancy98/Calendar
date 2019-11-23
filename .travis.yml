@@ -1,0 +1,4 @@
+os: osx
+osx_image: xcode11.2
+language: swift
+script: xcodebuild clean build -project Calendar.xcodeproj -scheme "Calendar" -sdk iphonesimulator
