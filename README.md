@@ -1,4 +1,5 @@
-# iOS calendar component writtern in swift  [![Build Status](https://travis-ci.com/lancy98/Calendar.svg?branch=master)](https://travis-ci.com/lancy98/Calendar)
+# iOS calendar component writtern in swift  
+[![Build Status](https://travis-ci.com/lancy98/Calendar.svg?branch=master)](https://travis-ci.com/lancy98/Calendar)
 
 Usage
 ========
