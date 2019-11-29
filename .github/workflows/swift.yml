@@ -1,4 +1,4 @@
-name: Calendar-Build
+name: Calendar Build
 
 on: [push]
 
