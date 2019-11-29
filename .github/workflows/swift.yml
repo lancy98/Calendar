@@ -1,4 +1,4 @@
-name: Swift
+name: Calendar-Build
 
 on: [push]
 
