@@ -11,7 +11,6 @@ import UIKit
 class WeekHeaderView: UICollectionReusableView {
 
     @IBOutlet var labels: [UILabel]!
-    
     let formatter = DateFormatter()
     
     override func awakeFromNib() {
