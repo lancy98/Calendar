@@ -1,7 +1,7 @@
 # iOS calendar component writtern in swift  
 [![Build Status](https://travis-ci.com/lancy98/Calendar.svg?branch=master)](https://travis-ci.com/lancy98/Calendar)
 
-![](https://github.com/lancy98/Calendar/workflows/.github/workflows/badge.svg)
+![](https://github.com/lancy98/Calendar/workflows/.github/workflows/swift.yml/badge.svg)
 
 
 Usage
