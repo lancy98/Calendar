@@ -67,7 +67,7 @@ class CalendarLogic {
     
     //Mark: Private methods.
     private var numberOfDaysInPreviousPartialWeek: Int {
-        return baseDate.weekDay - 1
+        baseDate.weekDay - 1
     }
     
     private var numberOfVisibleDaysforFollowingMonth: Int {
@@ -126,15 +126,15 @@ class CalendarLogic {
 
 extension CalendarLogic: Comparable {
     static func < (lhs: CalendarLogic, rhs: CalendarLogic) -> Bool {
-        return (lhs.baseDate.compare(rhs.baseDate) == .orderedAscending)
+        (lhs.baseDate.compare(rhs.baseDate) == .orderedAscending)
     }
     
     static func >(lhs: CalendarLogic, rhs: CalendarLogic) -> Bool {
-        return (lhs.baseDate.compare(rhs.baseDate) == .orderedDescending)
+        (lhs.baseDate.compare(rhs.baseDate) == .orderedDescending)
     }
     
     static func ==(lhs: CalendarLogic, rhs: CalendarLogic) -> Bool {
-        return lhs.hashValue == rhs.hashValue
+        lhs.hashValue == rhs.hashValue
     }
 }
 

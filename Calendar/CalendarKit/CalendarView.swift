@@ -8,9 +8,6 @@
 
 import UIKit
 
-// 12 months - base date - 12 months
-let kMonthRange = 12
-
 protocol CalendarViewDelegate: class {
     func didSelectDate(date: Date)
 }
@@ -22,6 +19,8 @@ class CalendarView: UIView, UICollectionViewDataSource, UICollectionViewDelegate
     @IBOutlet var nextButton: UIButton!
     @IBOutlet var previousButton: UIButton!
     weak var delegate: CalendarViewDelegate?
+    
+    private let kMonthRange = 12
     
     private var collectionData = [CalendarLogic]()
     var baseDate: Date? {
@@ -76,7 +75,7 @@ class CalendarView: UIView, UICollectionViewDataSource, UICollectionViewDelegate
     
     func collectionView(_ collectionView: UICollectionView,
                         numberOfItemsInSection section: Int) -> Int {
-        return collectionData.count
+        collectionData.count
     }
     
     func collectionView(_ collectionView: UICollectionView,
@@ -96,7 +95,7 @@ class CalendarView: UIView, UICollectionViewDataSource, UICollectionViewDelegate
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return collectionView.frame.size
+         collectionView.frame.size
     }
     
     func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
